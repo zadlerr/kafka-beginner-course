@@ -1,3 +1,5 @@
 # Project exclude paths
 /target/
 /.idea/
+kafka-beginner-course.iml
+kafkabeginnercourse.iml
