@@ -1,5 +1,6 @@
 # Project exclude paths
 /target/
-/.idea/
+/Kafka-basics/target/
+/Kafka-producer-twitter/target/
+.idea
 *.iml
-*.xml
