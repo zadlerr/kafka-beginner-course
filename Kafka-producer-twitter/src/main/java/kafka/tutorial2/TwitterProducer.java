@@ -43,7 +43,7 @@ public class TwitterProducer {
         /** Set up your blocking queues: Be sure to size these properly based on expected TPS of your stream */
         BlockingQueue<String> msgQueue = new LinkedBlockingQueue<String>(100);
         // create twitter client
-        List myList = Lists.newArrayList("kafka");
+        List myList = Lists.newArrayList("Columbia");
         Client hosebirdClient = createTwitterClient(msgQueue, myList);
         // Attempts to establish a connection.
         hosebirdClient.connect();
@@ -81,7 +81,7 @@ public class TwitterProducer {
                 break;
             }
             if (msg != null){
-//                count++;
+                count++;
                 logger.info(msg);
                 producer.send(new ProducerRecord<String, String>("twitter_tweets", null, msg), new Callback() {
                     @Override
